@@ -1,0 +1,29 @@
+GET http://localhost:3000/dragonball
+
+
+###
+
+POST http://localhost:3000/dragonball
+Content-Type: application/json
+
+{
+    "nome": "Goku2",
+    "Idade": "47",
+    "Ki": "+8000"
+}
+
+
+###
+
+POST http://localhost:3000/dragonball
+Content-Type: application/json
+
+{
+    "nome": "Vegeta",
+    "Idade": "47",
+    "Ki": "+8000"
+}
+
+
+
+

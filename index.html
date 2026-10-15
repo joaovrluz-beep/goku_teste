@@ -1,0 +1,33 @@
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTapXrQ7mV3FBvGysFEak421G-r5aATo_LJ-lnOBcmwyw&s=10">
+
+<input type="text" placeholder="img do Dragon Ball" id="img">
+
+<button onclick="cadastrar()">
+    cadastrar
+</button>
+
+<button onclick="buscar()">
+    buscar
+</button>
+
+<script>
+     async function buscar () {
+        const personagen = await fetch('http://localhost:3000/dragonball')
+    }   
+
+    async function cadastrar () {
+        const imagem = document.getElementById('img').value
+
+        const personagen = {
+            imagem
+        }
+
+        const resposta = await fetch('http://localhost:3000/dragonball', {
+            method: 'POST',
+            body: JSON.stringify(personagen),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }
+</script>
